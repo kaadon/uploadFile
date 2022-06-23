@@ -1,0 +1,29 @@
+{
+  "name": "kaadon/uploadfile",
+  "type": "library",
+  "description": "kaadon uploadfile for PHP",
+  "keywords": [
+    "capcha",
+    "kaadon"
+  ],
+  "homepage": "http://developer.kaadon.com/",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1"
+  },
+  "authors": [
+    {
+      "name": "kaadon",
+      "email": "kaadon@foxmail.com",
+      "homepage": "https://www.kaadon.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kaadon\\CapCha\\": "src"
+    }
+  },
+  "extra": {
+
+  }
+}
