@@ -3,14 +3,14 @@
 // +----------------------------------------------------------------------
 // | Kaadon
 // +----------------------------------------------------------------------
-// | PHP交流群: 763822524
+// | 开发交流: https://developer.kaadon.com
 // +----------------------------------------------------------------------
 // | 开源协议  https://mit-license.org 
 // +----------------------------------------------------------------------
-// | github开源项目：https://github.com/kaadon/Kaadon
+// | github开源项目：https://github.com/kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\trigger;
+namespace Kaadon\UploadFile\trigger;
 
 
 use think\facade\Db;
@@ -18,7 +18,7 @@ use think\facade\Db;
 /**
  * 保存到数据库
  * Class SaveDb
- * @package Kaadon\upload\trigger
+ * @package Kaadon\UploadFile\trigger
  */
 class SaveDb
 {

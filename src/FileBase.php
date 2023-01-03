@@ -3,14 +3,14 @@
 // +----------------------------------------------------------------------
 // | Kaadon
 // +----------------------------------------------------------------------
-// | PHP交流群: 763822524
+// | 开发交流: https://developer.kaadon.com
 // +----------------------------------------------------------------------
 // | 开源协议  https://mit-license.org 
 // +----------------------------------------------------------------------
-// | github开源项目：https://github.com/kaadon/Kaadon
+// | github开源项目：https://github.com/kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload;
+namespace Kaadon\UploadFile;
 
 
 use think\facade\Filesystem;
@@ -19,7 +19,7 @@ use think\File;
 /**
  * 基类
  * Class Base
- * @package Kaadon\upload
+ * @package Kaadon\UploadFile
  */
 class FileBase
 {

@@ -3,23 +3,23 @@
 // +----------------------------------------------------------------------
 // | Kaadon
 // +----------------------------------------------------------------------
-// | PHP交流群: 763822524
+// | 开发交流: https://developer.kaadon.com
 // +----------------------------------------------------------------------
 // | 开源协议  https://mit-license.org 
 // +----------------------------------------------------------------------
-// | github开源项目：https://github.com/kaadon/Kaadon
+// | github开源项目：https://github.com/kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver;
+namespace Kaadon\UploadFile\driver;
 
-use Kaadon\upload\FileBase;
-use Kaadon\upload\driver\alioss\Oss;
-use Kaadon\upload\trigger\SaveDb;
+use Kaadon\UploadFile\FileBase;
+use Kaadon\UploadFile\driver\alioss\Oss;
+use Kaadon\UploadFile\trigger\SaveDb;
 
 /**
  * 阿里云上传
  * Class Alioss
- * @package Kaadon\upload\driver
+ * @package Kaadon\UploadFile\driver
  */
 class Alioss extends FileBase
 {

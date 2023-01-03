@@ -3,16 +3,16 @@
 // +----------------------------------------------------------------------
 // | Kaadon
 // +----------------------------------------------------------------------
-// | PHP交流群: 763822524
+// | 开发交流: https://developer.kaadon.com
 // +----------------------------------------------------------------------
 // | 开源协议  https://mit-license.org 
 // +----------------------------------------------------------------------
-// | github开源项目：https://github.com/kaadon/Kaadon
+// | github开源项目：https://github.com/kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver\alioss;
+namespace Kaadon\UploadFile\driver\alioss;
 
-use Kaadon\upload\interfaces\OssDriver;
+use Kaadon\UploadFile\interfaces\OssDriver;
 use OSS\Core\OssException;
 use OSS\OssClient;
 

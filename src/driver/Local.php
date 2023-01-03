@@ -3,22 +3,22 @@
 // +----------------------------------------------------------------------
 // | Kaadon
 // +----------------------------------------------------------------------
-// | PHP交流群: 763822524
+// | 开发交流: https://developer.kaadon.com
 // +----------------------------------------------------------------------
 // | 开源协议  https://mit-license.org 
 // +----------------------------------------------------------------------
-// | github开源项目：https://github.com/kaadon/Kaadon
+// | github开源项目：https://github.com/kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver;
+namespace Kaadon\UploadFile\driver;
 
-use Kaadon\upload\FileBase;
-use Kaadon\upload\trigger\SaveDb;
+use Kaadon\UploadFile\FileBase;
+use Kaadon\UploadFile\trigger\SaveDb;
 
 /**
  * 本地上传
  * Class Local
- * @package Kaadon\upload\driver
+ * @package Kaadon\UploadFile\driver
  */
 class Local extends FileBase
 {

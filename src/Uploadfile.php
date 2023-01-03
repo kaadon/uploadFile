@@ -3,25 +3,25 @@
 // +----------------------------------------------------------------------
 // | Kaadon
 // +----------------------------------------------------------------------
-// | PHP交流群: 763822524
+// | 开发交流: https://developer.kaadon.com
 // +----------------------------------------------------------------------
 // | 开源协议  https://mit-license.org 
 // +----------------------------------------------------------------------
-// | github开源项目：https://github.com/kaadon/Kaadon
+// | github开源项目：https://github.com/kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload;
+namespace Kaadon\UploadFile;
 
-use Kaadon\upload\driver\Alioss;
-use Kaadon\upload\driver\Local;
-use Kaadon\upload\driver\Qnoss;
-use Kaadon\upload\driver\Txcos;
+use Kaadon\UploadFile\driver\Alioss;
+use Kaadon\UploadFile\driver\Local;
+use Kaadon\UploadFile\driver\Qnoss;
+use Kaadon\UploadFile\driver\Txcos;
 use think\File;
 
 /**
  * 上传组件
  * Class Uploadfile
- * @package Kaadon\upload
+ * @package Kaadon\UploadFile
  */
 class Uploadfile
 {
