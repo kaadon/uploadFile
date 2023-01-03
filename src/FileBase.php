@@ -14,7 +14,6 @@ namespace Kaadon\UploadFile;
 
 
 use think\facade\Filesystem;
-use think\File;
 
 /**
  * 基类
@@ -166,7 +165,7 @@ class FileBase
     {
         $this->completeFilePath = Filesystem::disk('public')->putFile('upload/' . $this->apiClassPath, $this->file);
         if (empty($this->staticDomain)) {
-            $this->staticDomain = $this->uploadConfig?:request()->domain();
+            $this->staticDomain = ($this->uploadConfig && isset($this->uploadConfig['static_domain'])) ? $this->uploadConfig['static_domain'] : request()->domain();
         }
         $this->completeFileUrl = $this->staticDomain . '/' . str_replace(DIRECTORY_SEPARATOR, '/', $this->completeFilePath);
     }

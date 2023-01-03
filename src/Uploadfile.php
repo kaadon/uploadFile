@@ -41,7 +41,7 @@ class Uploadfile
      * 上传方式
      * @var string
      */
-    protected $apiClassName = 'admin';
+    protected $apiClassName = 'default';
 
     /**
      * 上传配置文件

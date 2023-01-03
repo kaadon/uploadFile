@@ -30,6 +30,7 @@ class Local extends FileBase
     public function save()
     {
         parent::save();
+
         if ($this->isSaveTable == true){
             SaveDb::trigger($this->tableName, [
                 'upload_type'   => $this->uploadType,
@@ -37,16 +38,17 @@ class Local extends FileBase
                 'mime_type'     => $this->file->getOriginalMime(),
                 'file_ext'      => strtolower($this->file->getOriginalExtension()),
                 'url'           => $this->completeFileUrl,
-                'domain'           => $this->completeFileUrl,
+                'domain'           => $this->staticDomain?:request()->domain(),
                 'path'           => $this->completeFilePath,
                 'create_time'   => time(),
             ]);
         }
 
         return [
-            'save' => true,
-            'msg'  => '上传成功',
+            'save' => $this->isSaveTable,
             'url'  => $this->completeFileUrl,
+            'path'  => $this->completeFilePath,
+            'domain'  => $this->staticDomain?:request()->domain(),
         ];
     }
 
