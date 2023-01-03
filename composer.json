@@ -27,13 +27,13 @@
       "Kaadon\\UploadFile\\": "src"
     },
     "files": [
-      "helper.php"
+      "src/helper.php"
     ]
   },
   "extra": {
     "think": {
       "config": {
-        "tronservice": "config/tronservice.php"
+        "kaadon": "src/config/kaadon.php"
       }
     }
   }
