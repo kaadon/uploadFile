@@ -10,7 +10,10 @@
   "homepage": "http://developer.kaadon.com/",
   "license": "MIT",
   "require": {
-    "php": ">=7.1"
+    "php": ">=7.1",
+    "aliyuncs/oss-sdk-php": "^2.6",
+    "qcloud/cos-sdk-v5": "^2.6",
+    "qiniu/php-sdk": "^7.8"
   },
   "authors": [
     {
