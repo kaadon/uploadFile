@@ -16,7 +16,6 @@ use Kaadon\Upload\driver\Alioss;
 use Kaadon\Upload\driver\Local;
 use Kaadon\Upload\driver\qnoss;
 use Kaadon\Upload\driver\Txcos;
-use think\File;
 
 /**
  * 上传组件
