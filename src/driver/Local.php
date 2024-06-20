@@ -10,15 +10,15 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver;
+namespace Kaadon\Upload\driver;
 
-use Kaadon\upload\FileBase;
-use Kaadon\upload\trigger\SaveDb;
+use Kaadon\Upload\FileBase;
+use Kaadon\Upload\trigger\SaveDb;
 
 /**
  * 本地上传
  * Class Local
- * @package Kaadon\upload\driver
+ * @package Kaadon\Upload\driver
  */
 class Local extends FileBase
 {

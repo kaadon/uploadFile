@@ -10,18 +10,18 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload;
+namespace Kaadon\Upload;
 
-use Kaadon\upload\driver\Alioss;
-use Kaadon\upload\driver\Local;
-use Kaadon\upload\driver\Qnoss;
-use Kaadon\upload\driver\Txcos;
+use Kaadon\Upload\driver\Alioss;
+use Kaadon\Upload\driver\Local;
+use Kaadon\Upload\driver\qnoss;
+use Kaadon\Upload\driver\Txcos;
 use think\File;
 
 /**
  * 上传组件
  * Class Uploadfile
- * @package Kaadon\upload
+ * @package Kaadon\Upload
  */
 class Uploadfile
 {

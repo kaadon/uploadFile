@@ -14,13 +14,13 @@
   "authors": [
     {
       "name": "kaadon",
-      "email": "kaadon@foxmail.com",
+      "email": "kaadon.com@gmail.com",
       "homepage": "https://www.kaadon.com"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Kaadon\\CapCha\\": "src"
+      "Kaadon\\Upload\\": "src"
     }
   },
   "extra": {

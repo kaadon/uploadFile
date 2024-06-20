@@ -10,9 +10,9 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver\alioss;
+namespace Kaadon\Upload\driver\alioss;
 
-use Kaadon\upload\interfaces\OssDriver;
+use Kaadon\Upload\interfaces\OssDriver;
 use OSS\Core\OssException;
 use OSS\OssClient;
 

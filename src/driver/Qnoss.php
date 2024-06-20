@@ -10,16 +10,16 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver;
+namespace Kaadon\Upload\driver;
 
-use Kaadon\upload\FileBase;
-use Kaadon\upload\driver\qnoss\Oss;
-use Kaadon\upload\trigger\SaveDb;
+use Kaadon\Upload\FileBase;
+use Kaadon\Upload\driver\qnoss\Oss;
+use Kaadon\Upload\trigger\SaveDb;
 
 /**
  * 七牛云上传
  * Class Qnoss
- * @package Kaadon\upload\driver
+ * @package Kaadon\Upload\driver
  */
 class Qnoss extends FileBase
 {

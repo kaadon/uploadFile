@@ -10,7 +10,7 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\interfaces;
+namespace Kaadon\Upload\interfaces;
 
 interface OssDriver
 {
