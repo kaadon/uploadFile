@@ -81,7 +81,6 @@ class FileBase
     /**
      * 设置上传方式
      * @param $value
-     * @return $this
      */
     public function setStaticDomain($value = null)
     {
@@ -89,29 +88,24 @@ class FileBase
             $value = request()->domain();
         }
         $this->staticDomain = $value;
-        return $this;
     }
 
     /**
      * 设置上传方式
      * @param $value
-     * @return $this
      */
     public function setUploadType($value)
     {
         $this->uploadType = $value;
-        return $this;
     }
 
     /**
      * 是否保存到数据库
      * @param $value
-     * @return $this
      */
     public function setIsSaveTable($value = false)
     {
         $this->isSaveTable = $value;
-        return $this;
     }
 
     /**
@@ -122,7 +116,6 @@ class FileBase
     public function setUploadConfig($value)
     {
         $this->uploadConfig = $value;
-        return $this;
     }
 
     /**

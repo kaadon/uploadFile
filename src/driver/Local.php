@@ -25,12 +25,12 @@ class Local extends FileBase
 
     /**
      * 重写上传方法
-     * @return array|void
+     * @return array
      */
-    public function save()
+    public function save(): array
     {
         parent::save();
-        if ($this->isSaveTable == true){
+        if ($this->isSaveTable){
             SaveDb::trigger($this->tableName, [
                 'upload_type'   => $this->uploadType,
                 'original_name' => $this->file->getOriginalName(),

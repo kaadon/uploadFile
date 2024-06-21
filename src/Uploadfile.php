@@ -3,8 +3,6 @@
 // +----------------------------------------------------------------------
 // | Kaadon
 // +----------------------------------------------------------------------
-// | PHP交流群: 763822524
-// +----------------------------------------------------------------------
 // | 开源协议  https://mit-license.org 
 // +----------------------------------------------------------------------
 // | github开源项目：https://github.com/kaadon/Kaadon
@@ -24,7 +22,6 @@ use Kaadon\Upload\driver\Txcos;
  */
 class Uploadfile
 {
-
     /**
      * 当前实例对象
      * @var object
@@ -50,12 +47,10 @@ class Uploadfile
 
     /**
      * 需要上传的文件对象
-     * @var File
      */
     protected $file;
     /**
      * 是否需要保存
-     * @var File
      */
     protected $save = true;
 
@@ -80,73 +75,61 @@ class Uploadfile
     /**
      * 设置上传对象
      * @param $value
-     * @return $this
      */
     public function setFile($value)
     {
         $this->file = $value;
-        return $this;
     }
     /**
      * 设置上传对象
      * @param $value
-     * @return $this
      */
     public function setApiClassName($value)
     {
         $this->apiClassName = $value;
-        return $this;
     }
 
     /**
      * 设置上传对象
-     * @param $value
-     * @return $this
+     * @param bool $value
      */
-    public function isSave($value = true)
+    public function isSave(bool $value = true)
     {
         $this->save = $value;
-        return $this;
     }
 
     /**
      * 设置上传文件
      * @param $value
-     * @return $this
      */
     public function setUploadConfig($value)
     {
         $this->uploadConfig = $value;
-        return $this;
     }
 
     /**
      * 设置上传方式
      * @param $value
-     * @return $this
      */
     public function setUploadType($value)
     {
         $this->uploadType = $value;
-        return $this;
     }
 
     /**
      * 设置保存数据表
      * @param $value
-     * @return $this
      */
     public function setTableName($value)
     {
         $this->tableName = $value;
-        return $this;
     }
 
     /**
      * 保存文件
-     * @return array|void
+     * @return array
      */
-    public function save()
+    public function save(): array
     {
         $obj = null;
         if ($this->uploadType == 'local') {
@@ -167,7 +150,6 @@ class Uploadfile
         if ($this->uploadType == 'local' && !empty($this->uploadConfig['local_domain'])) {
             $obj->setStaticDomain('//' . $this->uploadConfig['local_domain']);
         }
-        $save = $obj->save();
-        return $save;
+        return $obj->save();
     }
 }
