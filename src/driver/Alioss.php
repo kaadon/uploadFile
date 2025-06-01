@@ -10,30 +10,29 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver;
+namespace Kaadon\Upload\driver;
 
-use Kaadon\upload\FileBase;
-use Kaadon\upload\driver\alioss\Oss;
-use Kaadon\upload\trigger\SaveDb;
+use Kaadon\Upload\driver\alioss\Oss;
+use Kaadon\Upload\trigger\SaveDb;
 
 /**
  * 阿里云上传
  * Class Alioss
- * @package Kaadon\upload\driver
+ * @package Kaadon\Upload\driver
  */
 class Alioss extends FileBase
 {
 
     /**
      * 重写上传方法
-     * @return array|void
+     * @return array
      */
-    public function save()
+    public function save(): array
     {
         parent::save();
         $upload = Oss::instance($this->uploadConfig)
             ->save($this->completeFilePath, $this->completeFilePath);
-        if ($upload['save'] == true && $this->isSaveTable == true) {
+        if ($upload['save'] && $this->isSaveTable) {
             SaveDb::trigger($this->tableName, [
                 'upload_type'   => $this->uploadType,
                 'original_name' => $this->file->getOriginalName(),

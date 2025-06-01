@@ -10,7 +10,7 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\trigger;
+namespace Kaadon\Upload\trigger;
 
 
 use think\facade\Db;
@@ -18,7 +18,7 @@ use think\facade\Db;
 /**
  * 保存到数据库
  * Class SaveDb
- * @package Kaadon\upload\trigger
+ * @package Kaadon\Upload\trigger
  */
 class SaveDb
 {

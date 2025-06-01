@@ -10,10 +10,10 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver\qnoss;
+namespace Kaadon\Upload\driver\qnoss;
 
 
-use Kaadon\upload\interfaces\OssDriver;
+use Kaadon\Upload\interfaces\OssDriver;
 use Qiniu\Auth;
 use Qiniu\Storage\UploadManager;
 

@@ -3,27 +3,29 @@
   "type": "library",
   "description": "kaadon uploadfile for PHP",
   "keywords": [
-    "capcha",
+    "uploadfile",
     "kaadon"
   ],
-  "homepage": "http://developer.kaadon.com/",
+  "homepage": "https://developer.kaadon.com/",
   "license": "MIT",
   "require": {
-    "php": ">=7.1"
+    "php": ">=7.2",
+    "topthink/think-filesystem": "^2",
+    "topthink/framework": "^6|^8",
+    "qiniu/php-sdk": "^7.14",
+    "aliyuncs/oss-sdk-php": "^2.7",
+    "qcloud/cos-sdk-v5": "^2.6"
   },
   "authors": [
     {
       "name": "kaadon",
-      "email": "kaadon@foxmail.com",
+      "email": "kaadon.com@gmail.com",
       "homepage": "https://www.kaadon.com"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Kaadon\\CapCha\\": "src"
+      "Kaadon\\Upload\\": "src"
     }
-  },
-  "extra": {
-
   }
 }

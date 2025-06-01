@@ -10,27 +10,26 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver;
+namespace Kaadon\Upload\driver;
 
-use Kaadon\upload\FileBase;
-use Kaadon\upload\trigger\SaveDb;
+use Kaadon\Upload\trigger\SaveDb;
 
 /**
  * 本地上传
  * Class Local
- * @package Kaadon\upload\driver
+ * @package Kaadon\Upload\driver
  */
 class Local extends FileBase
 {
 
     /**
      * 重写上传方法
-     * @return array|void
+     * @return array
      */
-    public function save()
+    public function save(): array
     {
         parent::save();
-        if ($this->isSaveTable == true){
+        if ($this->isSaveTable){
             SaveDb::trigger($this->tableName, [
                 'upload_type'   => $this->uploadType,
                 'original_name' => $this->file->getOriginalName(),

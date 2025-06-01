@@ -10,30 +10,29 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver;
+namespace Kaadon\Upload\driver;
 
-use Kaadon\upload\FileBase;
-use Kaadon\upload\driver\qnoss\Oss;
-use Kaadon\upload\trigger\SaveDb;
+use Kaadon\Upload\driver\qnoss\Oss;
+use Kaadon\Upload\trigger\SaveDb;
 
 /**
  * 七牛云上传
  * Class Qnoss
- * @package Kaadon\upload\driver
+ * @package Kaadon\Upload\driver
  */
 class Qnoss extends FileBase
 {
 
     /**
      * 重写上传方法
-     * @return array|void
+     * @return array
      */
-    public function save()
+    public function save(): array
     {
         parent::save();
         $upload = Oss::instance($this->uploadConfig)
             ->save($this->completeFilePath, $this->completeFilePath);
-        if ($upload['save'] == true  && $this->isSaveTable == true) {
+        if ($upload['save'] && $this->isSaveTable) {
             SaveDb::trigger($this->tableName, [
                 'upload_type'   => $this->uploadType,
                 'original_name' => $this->file->getOriginalName(),

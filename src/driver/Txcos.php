@@ -10,25 +10,24 @@
 // | github开源项目：https://github.com/kaadon/Kaadon
 // +----------------------------------------------------------------------
 
-namespace Kaadon\upload\driver;
+namespace Kaadon\Upload\driver;
 
-use Kaadon\upload\FileBase;
-use Kaadon\upload\driver\txcos\Cos;
-use Kaadon\upload\trigger\SaveDb;
+use Kaadon\Upload\driver\txcos\Cos;
+use Kaadon\Upload\trigger\SaveDb;
 
 /**
  * 腾讯云上传
  * Class Txcos
- * @package Kaadon\upload\driver
+ * @package Kaadon\Upload\driver
  */
 class Txcos extends FileBase
 {
 
     /**
      * 重写上传方法
-     * @return array|void
+     * @return array
      */
-    public function save()
+    public function save(): array
     {
         parent::save();
         $upload = Cos::instance($this->uploadConfig)
